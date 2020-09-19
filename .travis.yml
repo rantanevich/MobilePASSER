@@ -9,14 +9,16 @@ jobs:
       os: windows
       language: shell
       before_install:
-        - choco install python --verion 3.8.5
+        - choco install python --version 3.8.5
+        - python --version
         - python -m pip install --upgrade pip
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
     - name: "Python 3.6.1 on Windows"
       os: windows
       language: shell
       before_install:
-        - choco install python --verion 3.6.1
+        - choco install python --version 3.6.1
+        - python --version
         - python -m pip install --upgrade pip
       env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
 install:
