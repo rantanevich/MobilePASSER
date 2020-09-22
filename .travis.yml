@@ -26,12 +26,12 @@ jobs:
         - choco install python --version 3.6.1
       env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
     - stage: "Deploy to PyPi"
-      provider: pypi
-      skip_existing: true
-      username: rantanevich
-      password:
-        secure: vRrJegzy4H3siDGUnUBC1gd/B8qLzYb6X3UWGx9ZBMHk+bPqDM2AD/1eCJi6QKOMG/CVA/7Fhn+F4jorgBfCa9jVwRw6E4jLaQM/qA3IOBL50J/huQ4qtqcgdpGBi23fs0yQ1rFCxUwfwG19/4ztTFPYh/lxr3REU/5Q77sjB8IfsbJrejohxnPpIYZddSqFErKXOrkMGYQmQ10KMummtW9e0jquRMvkqkjnVtEHxlcY4r6Xdg6smFzb+CXNYzebia38VpAGg/KCxsjSvAehfbzbYKVsEdhbOfd82vmFb/tEyqDYG5yALIrfT9H5U6ThxjEcAwenAyW6Or+AeGpyPlYlZ3jc7xnpruo6pqx6bua902Jnm0q6m9s5ATTAniMqGgcLHlEWhcpD9fTeZb9xl1VS/q3QxQhbVojLkXm7qS7Sv3ZfpCORVTGB2BlV90iSm1jgybgediAJT08lnVdE71SjDHBVA5bOwwEccNnR95zeUE2AG6g+5ha0SpNYWKfHFmGhWWegiKoqCqFq/BQwkbHVFhwR2zzqMwivNEfsbpajTEzowIdJvM16Edv+VUB/odSGlAt3g1CcKizJQjxVmc+2yrhKazKuA8t3MvOzpIRtfUSc32iy+O6ilJYUE5taB1RLBw6Igj/G18murLDWb4847d8xM08OnA8BmNfXbeY=
-      on:
-        tags: true
-        branch: python
+      deploy:
+        provider: pypi
+        username: rantanevich
+        password:
+          secure: vRrJegzy4H3siDGUnUBC1gd/B8qLzYb6X3UWGx9ZBMHk+bPqDM2AD/1eCJi6QKOMG/CVA/7Fhn+F4jorgBfCa9jVwRw6E4jLaQM/qA3IOBL50J/huQ4qtqcgdpGBi23fs0yQ1rFCxUwfwG19/4ztTFPYh/lxr3REU/5Q77sjB8IfsbJrejohxnPpIYZddSqFErKXOrkMGYQmQ10KMummtW9e0jquRMvkqkjnVtEHxlcY4r6Xdg6smFzb+CXNYzebia38VpAGg/KCxsjSvAehfbzbYKVsEdhbOfd82vmFb/tEyqDYG5yALIrfT9H5U6ThxjEcAwenAyW6Or+AeGpyPlYlZ3jc7xnpruo6pqx6bua902Jnm0q6m9s5ATTAniMqGgcLHlEWhcpD9fTeZb9xl1VS/q3QxQhbVojLkXm7qS7Sv3ZfpCORVTGB2BlV90iSm1jgybgediAJT08lnVdE71SjDHBVA5bOwwEccNnR95zeUE2AG6g+5ha0SpNYWKfHFmGhWWegiKoqCqFq/BQwkbHVFhwR2zzqMwivNEfsbpajTEzowIdJvM16Edv+VUB/odSGlAt3g1CcKizJQjxVmc+2yrhKazKuA8t3MvOzpIRtfUSc32iy+O6ilJYUE5taB1RLBw6Igj/G18murLDWb4847d8xM08OnA8BmNfXbeY=
+        on:
+          tags: true
+          branch: python
 
